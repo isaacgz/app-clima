@@ -1,18 +1,23 @@
 {
-  "name": "05-clima-app",
+  "name": "app-clima",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API y CLI de clima con evaluación de riesgo climático para eventos",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js",
+    "cli": "node index.js",
+    "test": "node --test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
-    "colors": "^1.4.0",
+    "colors": "1.4.0",
     "dotenv": "^10.0.0",
+    "express": "^5.2.1",
     "inquirer": "^8.1.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
