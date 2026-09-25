@@ -1,5 +1,5 @@
 const express = require('express');
-const { ErrorServicio, buscarLugares, climaActual, pronostico } = require('./services/clima');
+const { FUENTE, ErrorServicio, buscarLugares, climaActual, pronostico } = require('./services/clima');
 const { evaluarRiesgo } = require('./services/riesgo');
 
 const DURACION_DEFAULT_MS = 3 * 3600 * 1000;
@@ -76,7 +76,8 @@ app.get('/api/riesgo', ruta(async(req, res) => {
     res.json({
         lugar: { lat, lng, ...(nombre && { nombre }) },
         evento: { inicio, fin },
-        ...evaluarRiesgo(bloques, inicio, fin)
+        ...evaluarRiesgo(bloques, inicio, fin),
+        fuente: FUENTE
     });
 }));
 

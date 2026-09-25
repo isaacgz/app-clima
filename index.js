@@ -39,12 +39,12 @@ const buscarCiudad = async(busquedas) => {
     console.log('Lat: ', lugarSel.lat);
     console.log('Lng: ', lugarSel.lng);
     console.log('Temperatura: ', clima.temp);
-    console.log('Sensación térmica: ', clima.sensacion);
     console.log('Minima: ', clima.min);
     console.log('Máxima: ', clima.max);
     console.log('Humedad: ', `${ clima.humedad }%`);
     console.log('Viento: ', `${ clima.vientoKmh } km/h`);
     console.log('Cómo está el clima: ', clima.desc.green);
+    console.log(`\n${ clima.fuente }`.gray);
 };
 
 const main = async() => {

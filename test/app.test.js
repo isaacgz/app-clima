@@ -7,7 +7,6 @@ let base;
 
 before(async() => {
     process.env.MAPBOX_KEY = 'x';
-    process.env.OPENWEATHER_KEY = 'x';
     server = app.listen(0);
     await new Promise(r => server.once('listening', r));
     base = `http://127.0.0.1:${ server.address().port }`;
